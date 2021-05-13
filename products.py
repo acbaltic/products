@@ -15,7 +15,7 @@ while True:
 print(products)
 
 
-with open('products.csv', 'w') as f:  # 打開檔案或開新檔案
+with open('products_utf8.csv', 'w', encoding='utf-8') as f:  # 打開檔案或開新檔案
     f.write('商品,價格\n')
     for p in products:
         f.write(p[0] + "," + str(p[1]) + '\n')  # 四個字串合併在一起，並寫入檔案；注意將整數的price轉成字串才能連結在起

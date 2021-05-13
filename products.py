@@ -17,3 +17,7 @@ for p in products:
     print(p)
     print(p[0])
     print(p[0], '的價格是：', p[1])
+
+with open('products.txt', 'w') as f:  # 打開檔案或開新檔案
+    for p in products:
+        f.write(p[0] + "," + p[1] + '\n')  # 四個字串合併在一起，並寫入檔案

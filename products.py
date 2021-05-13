@@ -12,4 +12,6 @@ while True:
     # p = [name, price] # 比上一段簡潔的程式碼
     products.append([name, price]) # 更簡潔的程式碼-->直接創造小清單然後加入大清單中
 print(products)
-print(products[0][0])
+
+for p in products:
+    print(p)

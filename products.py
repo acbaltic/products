@@ -4,6 +4,7 @@ while True:
     if name == 'q':
         break
     price = input('請輸入商品價格： ')
+    price = int(price)
     '''
     p = [] # 大清單products中的小清單元素
     p.append(name)
@@ -20,4 +21,4 @@ for p in products:
 
 with open('products.csv', 'w') as f:  # 打開檔案或開新檔案
     for p in products:
-        f.write(p[0] + "," + p[1] + '\n')  # 四個字串合併在一起，並寫入檔案
+        f.write(p[0] + "," + str(p[1]) + '\n')  # 四個字串合併在一起，並寫入檔案；注意將整數的price轉成字串才能連結在起

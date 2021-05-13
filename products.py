@@ -14,11 +14,8 @@ while True:
     products.append([name, price]) # 更簡潔的程式碼-->直接創造小清單然後加入大清單中
 print(products)
 
-for p in products:
-    print(p)
-    print(p[0])
-    print(p[0], '的價格是：', p[1])
 
 with open('products.csv', 'w') as f:  # 打開檔案或開新檔案
+    f.write('商品,價格\n')
     for p in products:
         f.write(p[0] + "," + str(p[1]) + '\n')  # 四個字串合併在一起，並寫入檔案；注意將整數的price轉成字串才能連結在起
